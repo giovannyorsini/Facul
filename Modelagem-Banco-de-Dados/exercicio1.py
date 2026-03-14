@@ -17,7 +17,7 @@ aluno = {
 with open("aluno.json", "w") as arquivo:
     json.dump(aluno, arquivo)
 
-print("Arquivo JSON criado com sucesso!")
+print("Arquivo JSON do aluno criado com sucesso!")
 
 # Lendo dados de um arquivo JSON
 
@@ -30,6 +30,7 @@ with open("aluno.json", "r") as arquivo:
     
 # Mostrando os dados carregados
 
+print("Exibindo informações do aluno.json:")
 print("Nome:", dados["nome"])
 print("Idade:", dados["idade"])
 print("Curso:", dados["curso"])
@@ -52,8 +53,10 @@ alunos = [
 
 # Salvando no arquivo JSON
 
-with open("alunos.json", "w") as arquivo:
+with open("notas.json", "w") as arquivo:
     json.dump(alunos, arquivo)
+
+print("Arquivo notas.json criado com sucesso!")
 
 # Lendo dados de um arquivo JSON
 
@@ -61,14 +64,48 @@ import json
 
 # Abrindo arquivo JSON
 
-with open("alunos.json", "r") as arquivo:
+with open("notas.json", "r") as arquivo:
     dados_alunos = json.load(arquivo)
 
 # Mostrando os dados carregados
 
+print("Exibindo informações de alunos da lista notas.json:")
 print("Nome:", dados_alunos[0]["nome"], ", Nota:", dados_alunos[0]["nota"],";")
 print("Nome:", dados_alunos[1]["nome"], ", Nota:", dados_alunos[1]["nota"], ";")
 print("Nome:", dados_alunos[2]["nome"], ", Nota:", dados_alunos[2]["nota"], ";")
 print("Nome:", dados_alunos[3]["nome"], ", Nota:", dados_alunos[3]["nota"], ";")
 print("Nome:", dados_alunos[4]["nome"], ", Nota:", dados_alunos[4]["nota"], ";")
 print("Nome:", dados_alunos[5]["nome"], ", Nota:", dados_alunos[5]["nota"], ";")
+
+# Dicionario com informações de um produto
+
+produto = {
+    "nome": "notebook",
+    "preco": 3500,
+    "estoque": 12
+}
+print("Dicionario produto criado com sucesso!")
+
+# Convertendo para formato JSON (string)
+
+produto_json = json.dumps(produto)
+print("O dicionario \"produto\" foi convertido para JSON")
+
+print("Exibindo dados de \"produto\" em formato JSON:")
+print(produto_json)
+
+# Abrindo o arquivo com notas
+with open("notas.json", "r") as arquivo:
+    alunos = json.load(arquivo)
+print("Acessando notas.json para consulta de notas dos alunos")
+
+# Calculando media das notas
+soma = 0
+for aluno in alunos:
+    soma += aluno["nota"]
+
+media = soma / len(alunos)
+print("Media da turma foi calculada com sucesso!")
+
+print("Exibindo media obtida:")
+print("Media da turma:", media)
