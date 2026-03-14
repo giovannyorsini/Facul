@@ -44,10 +44,31 @@ import json
 alunos = [
     {"nome": "Ana", "nota": 8.5},
     {"nome": "Pedro", "nota": 7.0},
-    {"nome": "Maria", "nota": 9.2}
+    {"nome": "Maria", "nota": 9.2},
+    {"nome": "João", "nota": 6.8},
+    {"nome": "Luisa", "nota": 8.0},
+    {"nome": "Carlos", "nota": 7.5}
 ]
 
 # Salvando no arquivo JSON
 
 with open("alunos.json", "w") as arquivo:
     json.dump(alunos, arquivo)
+
+# Lendo dados de um arquivo JSON
+
+import json
+
+# Abrindo arquivo JSON
+
+with open("alunos.json", "r") as arquivo:
+    dados_alunos = json.load(arquivo)
+
+# Mostrando os dados carregados
+
+print("Nome:", dados_alunos[0]["nome"], ", Nota:", dados_alunos[0]["nota"],";")
+print("Nome:", dados_alunos[1]["nome"], ", Nota:", dados_alunos[1]["nota"], ";")
+print("Nome:", dados_alunos[2]["nome"], ", Nota:", dados_alunos[2]["nota"], ";")
+print("Nome:", dados_alunos[3]["nome"], ", Nota:", dados_alunos[3]["nota"], ";")
+print("Nome:", dados_alunos[4]["nome"], ", Nota:", dados_alunos[4]["nota"], ";")
+print("Nome:", dados_alunos[5]["nome"], ", Nota:", dados_alunos[5]["nota"], ";")
