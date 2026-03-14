@@ -16,4 +16,21 @@ with open("aluno.json", "w") as arquivo:
 
 print("Arquivo JSON criado com sucesso!")
 
-# 
+# Lendo dados de um arquivo JSON
+
+import json
+
+# Abrindo arquivo JSON
+
+with open("aluno.json", "r") as arquivo:
+    dados = json.load(arquivo)
+    
+# Mostrando os dados carregados
+
+print("Nome:", dados["nome"])
+print("Idade:", dados["idade"])
+print("Curso:", dados["curso"])
+
+# Lista de alunos em JSON
+
+import json
