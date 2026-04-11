@@ -25,7 +25,10 @@ for aluno in colecao.find():
 #     { "$set": { "idade": 30 } }
 # )
 
-colecao.update_many(
-    { "idade": 27},
-    { "$set": { "idade": 20 }},
-)
+# colecao.update_many(
+#     { "idade": 27},
+#     { "$set": { "idade": 20 }},
+# )
+
+# remover
+colecao.delete_one({ "nome": "Bruno" })
