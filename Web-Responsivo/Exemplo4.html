@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro completo</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      .formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        background: #f4f4f4;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .linha {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="formulario">
+      <h2>Cadastro completo</h2>
+
+      <input type="text" placeholder="Nome" />
+      <input type="email" placeholder="Email" />
+
+      <div class="linha">
+        <input type="text" placeholder="Cidade" />
+        <input type="text" placeholder="Estado" />
+      </div>
+
+      <button>Cadastrar</button>
+    </form>
+  </body>
+</html>
